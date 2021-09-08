@@ -97,7 +97,9 @@ We spread via `topologyKey: kubernetes.io/hostname` that means we are using one 
 
 Taken from the docs:
 ```
-If two Nodes are labelled with this key and have identical values for that label, the scheduler treats both Nodes as being in the same topology. The scheduler tries to place a balanced number of Pods into each topology domain.
+If two Nodes are labelled with this key and have identical values for that label, 
+the scheduler treats both Nodes as being in the same topology. The scheduler tries 
+to place a balanced number of Pods into each topology domain.
 ```
 
 And with that we have the even spread we wanted to have.
