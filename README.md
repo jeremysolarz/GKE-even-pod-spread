@@ -20,4 +20,5 @@ In that case you give more weight to the `SelectorSpreadPriority`.
 A step by step guide explains it in [1] and an illustrative explanation in [2].
 
 [1] [Create Custom Scheduler on GKE for Pod Spreading](https://blog.searce.com/create-custom-scheduler-on-gke-for-pod-spreading-a23c1641a840)
+
 [2] [How to Keep Your Kubernetes Deployments Balanced Across Multiple zones](https://medium.com/expedia-group-tech/how-to-keep-your-kubernetes-deployments-balanced-across-multiple-zones-dfe719847b41)
