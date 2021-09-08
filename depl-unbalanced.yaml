@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    run: stress-deployment-unbalanced
+  name: stress-deployment-unbalanced
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: stress-unbalanced
+  template:
+    metadata:
+      labels:
+        app: stress-unbalanced
+    spec:
+      containers:
+      - name: stress-unbalanced
+        image: polinux/stress
+        resources:
+          limits:
+            memory: "200Mi"
+          requests:
+            memory: "100Mi"
+        command: ["stress"]
+        args: ["--vm", "1", "--vm-bytes", "150M", "--vm-hang", "900", "--timeout", "1000"]
